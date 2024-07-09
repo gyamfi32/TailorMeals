@@ -1,0 +1,149 @@
+/* .home-page {
+  font-size: 20px;
+  margin-bottom: 20px;
+} */
+
+/* .main-content {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* Home.css */
+.home-page {
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-section {
+  position: relative;
+  height: 60vh;
+  background-image: url('../Assets/pexels-mikhail-nilov-6707687.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.cta-button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+ background-color: #0059b3;
+}
+
+.cta-button a {
+  text-decoration: none;
+}
+
+.cta-button-text {
+  font-size: 1em;
+  color: white;
+}
+
+.main-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.main-content p.hero {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+
+.service-section,
+.recipes-section,
+.testimonials-section,
+.contact-section,
+.newsletter-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.service,
+.recipe,
+.testimonial {
+  margin: 10px 0;
+}
+
+.contact-section form,
+.newsletter-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section button,
+.newsletter-section button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.contact-section button:hover,
+.newsletter-section button:hover {
+  background-color: #0056b3;
+}
+
+
+.services-section {
+  background-color: #e9ecef;
+  text-align: center;
+  
+}
+
+.recipes-section {
+  background-color: #f8f9fa;
+  
+}
+
+.image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-bottom-right-radius: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.about-us {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+
+

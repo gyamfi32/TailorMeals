@@ -1,0 +1,53 @@
+/* NutritionalInfo.css */
+
+.nutritional-info-container {
+  background-image: url('../../Assets/pexels-yaroslav-shuraev-8844888.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  min-height: 100vh;
+}
+
+.nutritional-info-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nutritional-info-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nutritional-info-card-body {
+  font-size: 18px;
+  color: #666;
+}
+
+.nutritional-info-form-group {
+  margin-bottom: 20px;
+}
+
+.nutritional-info-form-label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nutritional-info-form-control {
+  font-size: 16px;
+}
+
+.nutritional-info-button {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.nutrition {
+  color: white;
+  font-size: xx-large;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border-radius: 10px;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.185);
+  color: white;
+  text-align: center;
+}
+
+.contact-us{
+  color: black;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+  
+}
