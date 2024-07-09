@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Footer from "../Components/Footer/Footer"
+import Footer from "../Components/Footer/Footer";
 import "./Home.css";
 import image from "../Assets/pexels-mastercowley-1153370.jpg";
 import {
@@ -19,37 +19,37 @@ import {
 } from "mdb-react-ui-kit";
 
 const Home = () => {
-   const [featuredRecipe, setFeaturedRecipe] = useState(null);
-   const [loading, setLoading] = useState(false);
-   const [error, setError] = useState("");
+  const [featuredRecipe, setFeaturedRecipe] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-   useEffect(() => {
-     fetchFeaturedRecipe();
-   }, []);
+  useEffect(() => {
+    fetchFeaturedRecipe();
+  }, []);
 
-   const fetchFeaturedRecipe = async () => {
-     setLoading(true);
-     setError("");
-     try {
-       const response = await axios.get(
-         `https://api.spoonacular.com/recipes/random`,
-         {
-           params: {
-             number: 1,
-             apiKey: "86468b2df7e34289a04d940745305de0", // Replace with your Spoonacular API key
-           },
-         }
-       );
-       setFeaturedRecipe(response.data.recipes[0]);
-     } catch (error) {
-       setError(
-         "An error occurred while fetching the featured recipe. Please try again."
-       );
-       console.error(error);
-     } finally {
-       setLoading(false);
-     }
-   };
+  const fetchFeaturedRecipe = async () => {
+    setLoading(true);
+    setError("");
+    try {
+      const response = await axios.get(
+        `https://api.spoonacular.com/recipes/random`,
+        {
+          params: {
+            number: 1,
+            apiKey: "86468b2df7e34289a04d940745305de0", // Replace with your Spoonacular API key
+          },
+        }
+      );
+      setFeaturedRecipe(response.data.recipes[0]);
+    } catch (error) {
+      setError(
+        "An error occurred while fetching the featured recipe. Please try again."
+      );
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="home-page">
@@ -93,8 +93,8 @@ const Home = () => {
             </p>
           </div>
           <div className="service">
-            <h3>Dietary Consultations</h3>
-            <p>Consult with our experts to plan your perfect diet.</p>
+            <h3>Dietary Nutritional Info</h3>
+            <p>Get nutritiom information on meals to inform you...</p>
           </div>
         </section>
       </div>
@@ -103,18 +103,29 @@ const Home = () => {
         {loading && <p>Loading...</p>}
         {error && <p className="text-danger">{error}</p>}
         {featuredRecipe && (
-          <div className="featured-recipe">
-            <img src={featuredRecipe.image} alt={featuredRecipe.title} />
-            <h3>{featuredRecipe.title}</h3>
-            <p>{featuredRecipe.summary.replace(/(<([^>]+)>)/gi, "")}</p>
-            <a
-              href={featuredRecipe.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              View Recipe
-            </a>
+          <div className="featured-main d-flex justify-content-evenly mt-5">
+            <div className="featured-recipe">
+              <img
+                className="rounded"
+                src={featuredRecipe.image}
+                alt={featuredRecipe.title}
+              />
+            </div>
+
+            <div className="featured-recipe-info ">
+              <h3>{featuredRecipe.title}</h3>
+              <p className="recipe-info m-4">
+                {featuredRecipe.summary.replace(/(<([^>]+)>)/gi, "")}
+              </p>
+              <a
+                href={featuredRecipe.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
+                View Recipe
+              </a>
+            </div>
           </div>
         )}
       </div>
@@ -258,18 +269,18 @@ const Home = () => {
         </MDBContainer>
       </div>
 
-      <div className="d-flex justify-content-center">
+      <div className="mx-auto w-50">
         <MDBValidation
           noValidate
           id="form"
           className="text-center "
-          style={{ width: "100%", maxWidth: "300px" }}
+          style={{ width: "100%" }}
         >
           <h2>Contact us</h2>
 
           <MDBValidationItem invalid feedback="Please provide your name.">
             <MDBInput
-              label="Name"
+              placeholder="Name"
               v-model="name"
               wrapperClass="mb-4"
               required
@@ -279,7 +290,7 @@ const Home = () => {
           <MDBValidationItem invalid feedback="Please provide your email.">
             <MDBInput
               type="email"
-              label="Email address"
+              placeholder="Email address"
               v-model="email"
               wrapperClass="mb-4"
               required
@@ -288,7 +299,7 @@ const Home = () => {
 
           <MDBValidationItem invalid feedback="Please provide mail subject.">
             <MDBInput
-              label="Subject"
+              placeholder="Subject"
               v-model="subject"
               wrapperClass="mb-4"
               required
@@ -296,7 +307,11 @@ const Home = () => {
           </MDBValidationItem>
 
           <MDBValidationItem invalid feedback="Please provide a message text.">
-            <MDBTextArea wrapperClass="mb-4" label="Message" required />
+            <MDBTextArea
+              wrapperClass="mb-4"
+              placeholder="Type message here"
+              required
+            />
           </MDBValidationItem>
           <MDBBtn type="submit" color="primary" block className=" my-4">
             Send
@@ -305,15 +320,14 @@ const Home = () => {
       </div>
 
       <section className="newsletter-section">
-        <h2>Subscribe to our Newsletter</h2>
-        <form>
-          <input type="email" placeholder="Your Email" />
-          <button type="submit">Subscribe</button>
+        <h2 className="mt-4 text-center">Subscribe to our Newsletter</h2>
+        <form className="d-flex w-50 justify-content-evenly mx-auto align-items-center my-4">
+          <input className="input-field" type="email" placeholder="Your Email" /> &nbsp; &nbsp; &nbsp;
+          <button className="submit-button bg-primary" type="submit">Subscribe</button>
         </form>
       </section>
       <Footer />
     </div>
-    
   );
 };
 
