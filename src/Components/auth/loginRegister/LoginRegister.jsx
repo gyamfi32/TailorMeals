@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import "./LoginRegister.css";
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
 import {
@@ -130,7 +130,7 @@ function LoginRegister () {
                 <input type="checkbox" />
                 Remember me
               </label>
-              <a href="#">Forgot password?</a>
+              <a href="loginregister">Forgot password?</a>
             </div>
 
             <button type="submit">Login</button>

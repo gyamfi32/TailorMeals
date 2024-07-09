@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import axios from "axios";
 import "./NutritionalInfo.css"
-import Footer from "../Footer/Footer";
+
 
 
 
