@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
 import axios from "axios";
+import "./MealPlanning.css"
+
 
 const MealPlanning = () => {
   const [meals, setMeals] = useState([]);
@@ -55,7 +57,14 @@ const MealPlanning = () => {
   };
 
   return (
+       <div className="meal-planning-background ">
+      <video autoPlay loop muted className="background-video">
+        <source src={`${process.env.PUBLIC_URL}/Video.mp4`} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
     <Container className="mt-5 justify-content">
+
       <h1 className="meal-plan mb-4">Meal Planning</h1>
       <Button variant="primary" onClick={fetchMealPlans} className="mb-4">
         Fetch Meal Plans
@@ -65,6 +74,7 @@ const MealPlanning = () => {
       {nutritionSummary && (
         <div className="nutrition-summary mb-4">
           <h2>Nutrition Summary</h2>
+          <h3>BreakFast</h3>
           <ul>
             <li>Calories: {nutritionSummary.calories}</li>
             <li>Carbohydrates: {nutritionSummary.carbohydrates} g</li>
@@ -117,6 +127,7 @@ const MealPlanning = () => {
         </Modal.Footer>
       </Modal>
     </Container>
+    </div>
   );
 };
 

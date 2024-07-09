@@ -41,6 +41,7 @@ const HealthProfileForm = () => {
           value={formData.healthConditions}
           onChange={handleChange}
           placeholder="Enter your health conditions"
+          required
         />
       </div>
       <div className="form-group">
@@ -53,6 +54,7 @@ const HealthProfileForm = () => {
           value={formData.dietaryPreferences}
           onChange={handleChange}
           placeholder="Enter your dietary preferences"
+          required
         />
       </div>
       <button type="submit" className="btn btn-primary">
