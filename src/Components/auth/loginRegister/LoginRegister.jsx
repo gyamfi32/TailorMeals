@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import "./LoginRegister.css";
+import UserProfile from "../../UserProfile/UserProfile";
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
 import {
   doSignInWithEmailAndPassword,
@@ -63,7 +64,7 @@ function LoginRegister () {
       try {
         await doCreateUserWithEmailAndPassword(email, password);
         setIsSigningIn(false);
-        navigate("/");
+        navigate("UserProfile");
       } catch (error) {
         setIsSigningIn(false);
         setErrorMessage("Error registering: " + error.message);
@@ -133,7 +134,7 @@ function LoginRegister () {
               <a href="loginregister">Forgot password?</a>
             </div>
 
-            <button type="submit">Login</button>
+            <button  onClick={UserProfile}>Login</button>
             {/* <button type="submit"> */}
             <button onClick={onGoogleSignIn} disabled={isSigningIn}>
               Login with Google
@@ -142,7 +143,7 @@ function LoginRegister () {
             <div className="register-link">
               <p>
                 Don't have an account?{" "}
-                <a href="loginregister" onClick={registerLink}>
+                <a href="" onClick={registerLink}>
                   Register
                 </a>
               </p>
@@ -202,7 +203,7 @@ function LoginRegister () {
               </label>
             </div>
             {/* <button type="submit"> */}
-            <button type="submit" disabled={isSigningIn}>
+            <button type="submit" onSubmit={UserProfile} disabled={isSigningIn}>
               Register
             </button>
 
