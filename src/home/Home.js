@@ -89,12 +89,22 @@ const Home = () => {
           <div className="service ">
             <h3>Meal Customization</h3>
             <p className="tailor">
-              Get meals tailored to your dietary preferences and health goals.
+              Discover personalized meal plans tailored to your unique
+              preferences and health requirements. Our intelligent algorithm
+              creates meal plans that suit your dietary needs and lifestyle.
+              Enjoy delicious, healthy meals that make achieving your wellness
+              goals easier than ever.
             </p>
           </div>
           <div className="service">
             <h3>Dietary Nutritional Info</h3>
-            <p>Get nutritiom information on meals to inform you...</p>
+            <p>
+              Access detailed nutrition information on every meal to make
+              informed dietary choices. Our comprehensive database provides
+              insights into calories, macros, and other essential nutrients.
+              Stay informed and take control of your health with our easy-to-use
+              web app.
+            </p>
           </div>
         </section>
       </div>
@@ -322,8 +332,15 @@ const Home = () => {
       <section className="newsletter-section">
         <h2 className="mt-4 text-center">Subscribe to our Newsletter</h2>
         <form className="d-flex w-50 justify-content-evenly mx-auto align-items-center my-4">
-          <input className="input-field" type="email" placeholder="Your Email" /> &nbsp; &nbsp; &nbsp;
-          <button className="submit-button bg-primary" type="submit">Subscribe</button>
+          <input
+            className="input-field"
+            type="email"
+            placeholder="Your Email"
+          />{" "}
+          &nbsp; &nbsp; &nbsp;
+          <button className="submit-button bg-primary" type="submit">
+            Subscribe
+          </button>
         </form>
       </section>
       <Footer />

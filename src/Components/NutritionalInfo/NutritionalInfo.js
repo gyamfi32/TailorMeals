@@ -68,7 +68,7 @@ const NutritionalInfo = () => {
               controlId="formSearch"
             >
               <Form.Label column sm={2} className="nutritional-info-form-label">
-                Search Meal
+                Search Meal Info
               </Form.Label>
               <Col sm={8}>
                 <Form.Control

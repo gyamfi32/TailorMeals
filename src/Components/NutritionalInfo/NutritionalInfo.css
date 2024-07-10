@@ -41,6 +41,9 @@
 .nutritional-info-button {
   font-size: 16px;
   padding: 10px 20px;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: -3px !important;
 }
 
 .nutrition {

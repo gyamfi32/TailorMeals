@@ -12,6 +12,9 @@
 
 .search-btn {
     padding: auto;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: -3px !important;
  
 }
 
