@@ -3,15 +3,14 @@ import { getAuth } from "firebase/auth";
 
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyDDMwtp_oLTzwPjS_R-91rwoWMgbW8n2a0",
+  authDomain: "tailor-meals.firebaseapp.com",
+  projectId: "tailor-meals",
+  storageBucket: "tailor-meals.appspot.com",
+  messagingSenderId: "667925488799",
+  appId: "1:667925488799:web:233a6acdb3e1dc8420eeaa",
+  measurementId: "G-R2B8GJHJPF",
 };
-
 // Initialize Firebase
 
 const app = initializeApp(firebaseConfig);
