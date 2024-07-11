@@ -74,13 +74,10 @@ const MealPlanning = () => {
       {nutritionSummary && (
         <div className="nutrition-summary mb-4">
           <h2>Nutrition Summary</h2>
-          <h3>BreakFast</h3>
-          <ul>
-            <li>Calories: {nutritionSummary.calories}</li>
-            <li>Carbohydrates: {nutritionSummary.carbohydrates} g</li>
-            <li>Fat: {nutritionSummary.fat} g</li>
-            <li>Protein: {nutritionSummary.protein} g</li>
-          </ul>
+          <p>Calories: {nutritionSummary.calories}</p>
+          <p>Carbohydrates: {nutritionSummary.carbohydrates} g</p>
+          <p>Fat: {nutritionSummary.fat} g</p>
+          <p>Protein: {nutritionSummary.protein} g</p>
         </div>
       )}
       <Row>
