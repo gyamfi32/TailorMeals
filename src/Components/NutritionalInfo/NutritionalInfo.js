@@ -13,10 +13,6 @@ import "./NutritionalInfo.css"
 
 
 
-
-
-
-
 const NutritionalInfo = () => {
   const [query, setQuery] = useState("");
   const [nutritionalInfo, setNutritionalInfo] = useState(null);
